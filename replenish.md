@@ -76,13 +76,13 @@ yarn config set registry https://registry.npmjs.org
 ### 提交代码
 
 ```
-
 git remote add origin https://github.com/aenuen/hatch-www-a1.git
+```
+
+```
 git branch -M main
+```
+
+```
 git push -u origin main
-
-```
-
-```
-
 ```
