@@ -1,0 +1,7 @@
+build/*.js
+assets
+static
+public
+dist
+.nuxt/*
+node_modules/*

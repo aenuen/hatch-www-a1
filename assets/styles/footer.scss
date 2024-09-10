@@ -1,0 +1,187 @@
+footer {
+  background: url('~assets/images/footerBg.jpg') center center;
+  background-size: contain;
+
+  .footerWrap {
+    height: 300px;
+    max-width: 1440px;
+    min-width: 1160px;
+    padding: 30px 20px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+    .footerLeft {
+      width: 360px;
+      margin-right: 20px;
+
+      .TitleApp {
+        color: #fff;
+        font-size: 20px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        padding-left: 30px;
+        background: url('~assets/images/icon/app.png') no-repeat left center;
+      }
+
+      .footerIcon {
+        width: 100%;
+        padding-top: 30px;
+        display: flex;
+
+        .commonIcon {
+          width: 170px;
+          height: 50px;
+          border-radius: 5px;
+          padding-left: 60px;
+          cursor: pointer;
+          position: relative;
+
+          .text {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 50px;
+          }
+        }
+
+        .commonIcon.apple {
+          background: url('~assets/images/icon/apple.png') no-repeat 20px center #fff;
+          margin-right: 20px;
+        }
+
+        .commonIcon.android {
+          background: url('~assets/images/icon/android.png') no-repeat 20px center #fff;
+        }
+
+        .commonIcon:hover {
+          .qrcShow {
+            display: block;
+          }
+        }
+      }
+
+      .footerChat {
+        padding-top: 30px;
+        .WeChatIcon {
+          background-color: rgba(255, 255, 255, 0.2);
+          width: 80px;
+          height: 80px;
+          padding: 22px 18px;
+          border-radius: 100%;
+          position: relative;
+          cursor: pointer;
+          .icon {
+            width: 44px;
+            height: 36px;
+            background: url('~assets/images/icon/wechat.png') no-repeat center center;
+          }
+        }
+        .WeChatIcon:hover {
+          .qrcShow {
+            display: block;
+            left: -45px;
+            bottom: 105px;
+          }
+        }
+      }
+
+      .qrcShow {
+        display: none;
+        position: absolute;
+        width: 170px;
+        height: 170px;
+        left: 0;
+        bottom: 70px;
+        z-index: 999;
+
+        .qrcArrow {
+          position: absolute;
+          width: 18px;
+          height: 9px;
+          left: 75px;
+          bottom: -9px;
+          background: url('~assets/images/qrc/arrow.png') no-repeat center center;
+        }
+      }
+    }
+
+    .footerRight {
+      width: 780px;
+      .TitleEarth {
+        color: #fff;
+        font-size: 20px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        padding-left: 30px;
+        background: url('~assets/images/icon/earth.png') no-repeat left center;
+      }
+
+      .footerLink {
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+
+        .linkItem {
+          width: 200px;
+          margin-right: 20px;
+          position: relative;
+
+          .title {
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: url('~assets/images/qrc/arrow.png') no-repeat 175px center;
+            text-indent: 9px;
+            cursor: pointer;
+            color: #fff;
+          }
+
+          ul {
+            overflow-y: auto;
+            overflow-x: hidden;
+            width: 200px;
+            height: 125px;
+            background-color: #fff;
+            border: 1px solid #fff;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            display: none;
+            li {
+              text-indent: 10px;
+              overflow: hidden;
+              height: 25px;
+              line-height: 25px;
+            }
+          }
+        }
+
+        .linkItem:hover {
+          ul {
+            display: block;
+          }
+        }
+
+        .linkItem:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .footerCopy {
+        margin-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        padding-top: 19px;
+        line-height: 40px;
+        font-size: 16px;
+        color: #fff;
+      }
+
+      .footerCopy a {
+        color: #fff;
+      }
+    }
+  }
+}

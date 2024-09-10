@@ -17,6 +17,18 @@ cnpm i -D defu@5.0.0
 npx create-nuxt-app
 ```
 
+```
+1. `kgithub.com`：您可以将GitHub源网址前面加`k`来使用，例如将`https://github.com/username/repo.git`改为`https://kgithub.com/username/repo.git`。这个镜像站点允许查看代码、Issue和评论，但不能注册、上传文件，也不能从`raw.githubusercontent.com`下载文件，可以登录并在线编辑。
+```
+
+```
+2. `hub.nuaa.cf` 和 `hub.fgit.ml`：这些是推荐的镜像站点，您可以通过更改GitHub仓库地址的域名部分来使用它们，例如将 `https://github.com/username/repo.git` 改为 `https://hub.nuaa.cf/username/repo.git` 或 `https://hub.fgit.ml/username/repo.git`。
+```
+
+```
+3. `gitclone.com`：这是一个提供下载缓存的代码下载网站，可以在仓库地址前面加上 `gitclone.com`，例如将 `https://github.com/username/repo.git` 改为 `https://gitclone.com/github.com/username/repo.git`，然后使用 `git clone` 命令来下载仓库
+```
+
 ### npm/cnpm/yarn 镜像源
 
 #### npm

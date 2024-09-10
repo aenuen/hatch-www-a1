@@ -1,0 +1,112 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 999;
+  background-color: #fff;
+  transition: 0.2s all linear;
+  &.isTop {
+    transition: 0.2s all linear;
+    background: rgba(85, 130, 170, 0.8);
+  }
+
+  .header-wrap {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      width: 330px;
+      height: 60px;
+      background: url('~assets/images/logo/logo-full.png') no-repeat center center;
+    }
+
+    nav {
+      width: 840px;
+      height: 40px;
+      margin: 10px 0;
+
+      .main-menu {
+        display: flex;
+
+        > li {
+          padding: 0 10px;
+          min-width: 100px;
+          height: 40px;
+          position: relative;
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 0;
+            height: 100%;
+            border-bottom: 2px solid #1890ff;
+            transition: 0.2s all linear;
+          }
+
+          &:hover {
+            .dropdown-menu {
+              display: block;
+            }
+            &::before {
+              width: 100%;
+              top: 0;
+              left: 0;
+              transition-delay: 0.1s;
+              border-bottom-color: #1890ff;
+              z-index: -1;
+            }
+          }
+
+          .dropdown-menu {
+            display: none;
+            width: 200px;
+            overflow: hidden;
+            position: absolute;
+            top: 40px;
+            left: -20px;
+
+            > ul {
+              background-color: #efefef;
+              border-radius: 10px;
+              padding: 20px 0;
+              > li {
+                min-width: 100px;
+                height: 40px;
+                position: relative;
+                a {
+                  text-indent: 35px;
+                  text-align: left;
+                }
+              }
+            }
+          }
+
+          a {
+            display: block;
+            padding: 0 10px;
+            color: #000;
+            font-size: 16px;
+            line-height: 30px;
+            border-radius: 5px;
+            text-align: center;
+            &:hover {
+              color: #1890ff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1430px) {
+    .header-wrap {
+      width: 95%;
+    }
+  }
+}
