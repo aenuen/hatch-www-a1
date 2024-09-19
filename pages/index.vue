@@ -54,10 +54,10 @@
       </div>
       <div class="content">
         <div class="contentText">
-          临清市万川信息科技有限公司是一家国家高新技术企业。位于山东省聊城市临清市新华路街道三和路与青年路交叉口向南200米路西三楼314室。公司专注于产业数字经济的高新技术研发和应用，并在业内获得了多项发明专利及软件著作权。在技术、系统管理、应急保障等方面达到了国家最高标准。公司基于企业信用信息、融资需求信息、金融机构产品信息和政府政策信息的交互对接需求，运用人工智能、云计算、大数据和区块链等十二大前沿技术与传统产业相结合，创新研发出临清市综合服务与产业孵化平台。平台融合了电子招标、电子保函、供应链金融管理、供应链商城、综合金融服务、产业整合计划、政府招商引资与产业孵化计划、企业订制化服务、惠企直播间、数字乡村绿色金融、碳汇信用体系、政府双碳新能源解决方案、智慧校园、智慧农业、智慧工地等十五大板块，为金融机构提供科技创新服务，为企业提供数字化解决方案，为政府平台经济建设插上科技的翅膀。
+          万川（焦作）科技有限责任公司是一家国家高新技术企业。位于河南省焦作市解放区太行西路16号地理信息产业园E栋102号室。公司专注于产业数字经济的高新技术研发和应用，并在业内获得了多项发明专利及软件著作权。在技术、系统管理、应急保障等方面达到了国家最高标准。公司基于企业信用信息、融资需求信息、金融机构产品信息和政府政策信息的交互对接需求，运用人工智能、云计算、大数据和区块链等十二大前沿技术与传统产业相结合，创新研发出焦作解放区综合服务与产业孵化平台。平台融合了电子招标、电子保函、供应链金融管理、供应链商城、综合金融服务、产业整合计划、政府招商引资与产业孵化计划、企业订制化服务、惠企直播间、数字乡村绿色金融、碳汇信用体系、政府双碳新能源解决方案、智慧校园、智慧农业、智慧工地等十五大板块，为金融机构提供科技创新服务，为企业提供数字化解决方案，为政府平台经济建设插上科技的翅膀。
         </div>
         <div contentImage>
-          <a-avatar shape="square" :src="aboutUs" style="display: block; width: 400px; height: 250px; margin: auto" />
+          <a-avatar shape="square" :src="aboutUsImage" style="display: block; width: 400px; height: 250px; margin: auto" />
         </div>
       </div>
     </section>
@@ -69,7 +69,7 @@
       </div>
       <div class="content">
         <div class="left">
-          <a-avatar shape="square" :src="news" style="width: 580px; height: 400px" />
+          <a-avatar shape="square" :src="newsWrapImage" style="width: 580px; height: 400px" />
         </div>
         <div class="right">
           <ul class="nav">
@@ -84,151 +84,43 @@
             </li>
           </ul>
           <ul v-if="+newsTabs === 1" class="news">
-            <li>
-              <a title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">
+            <li v-for="(item, index) in articleAry.list1" :key="index">
+              <a :title="item.title">
                 <div class="newsLeft">
-                  <b>22</b>
-                  <i>2023-09</i>
+                  <b>{{ item.created | timeGetDay }}</b>
+                  <i>{{ item.created | timeGetYearMonth }}</i>
                 </div>
                 <div class="newsRight">
-                  <div class="title" title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线</div>
-                  <div class="desc">热烈庆祝万川汇泽临清市综合服务与产业孵化平台上线，竭诚欢迎你的光临！</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">
-                <div class="newsLeft">
-                  <b>22</b>
-                  <i>2023-09</i>
-                </div>
-                <div class="newsRight">
-                  <div class="title" title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线</div>
-                  <div class="desc">热烈庆祝万川汇泽临清市综合服务与产业孵化平台上线，竭诚欢迎你的光临！</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">
-                <div class="newsLeft">
-                  <b>22</b>
-                  <i>2023-09</i>
-                </div>
-                <div class="newsRight">
-                  <div class="title" title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线</div>
-                  <div class="desc">热烈庆祝万川汇泽临清市综合服务与产业孵化平台上线，竭诚欢迎你的光临！</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">
-                <div class="newsLeft">
-                  <b>22</b>
-                  <i>2023-09</i>
-                </div>
-                <div class="newsRight">
-                  <div class="title" title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线</div>
-                  <div class="desc">热烈庆祝万川汇泽临清市综合服务与产业孵化平台上线，竭诚欢迎你的光临！</div>
+                  <div class="title" :title="item.title">{{ item.title }}</div>
+                  <div class="desc">{{ item.desc }}</div>
                 </div>
               </a>
             </li>
           </ul>
           <ul v-if="+newsTabs === 2" class="news">
-            <li>
-              <a title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">
+            <li v-for="(item, index) in newAry" :key="index">
+              <a :title="item.title">
                 <div class="newsLeft">
-                  <b>23</b>
-                  <i>2023-09</i>
+                  <b>{{ item.created | timeGetDay }}</b>
+                  <i>{{ item.created | timeGetYearMonth }}</i>
                 </div>
                 <div class="newsRight">
-                  <div class="title" title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线</div>
-                  <div class="desc">热烈庆祝万川汇泽临清市综合服务与产业孵化平台上线，竭诚欢迎你的光临！</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">
-                <div class="newsLeft">
-                  <b>22</b>
-                  <i>2023-09</i>
-                </div>
-                <div class="newsRight">
-                  <div class="title" title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线</div>
-                  <div class="desc">热烈庆祝万川汇泽临清市综合服务与产业孵化平台上线，竭诚欢迎你的光临！</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">
-                <div class="newsLeft">
-                  <b>22</b>
-                  <i>2023-09</i>
-                </div>
-                <div class="newsRight">
-                  <div class="title" title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线</div>
-                  <div class="desc">热烈庆祝万川汇泽临清市综合服务与产业孵化平台上线，竭诚欢迎你的光临！</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">
-                <div class="newsLeft">
-                  <b>22</b>
-                  <i>2023-09</i>
-                </div>
-                <div class="newsRight">
-                  <div class="title" title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线</div>
-                  <div class="desc">热烈庆祝万川汇泽临清市综合服务与产业孵化平台上线，竭诚欢迎你的光临！</div>
+                  <div class="title" :title="item.title">{{ item.title }}</div>
+                  <div class="desc">{{ item.desc }}</div>
                 </div>
               </a>
             </li>
           </ul>
           <ul v-if="+newsTabs === 3" class="news">
-            <li>
-              <a title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">
+            <li v-for="(item, index) in newAry" :key="index">
+              <a :title="item.title">
                 <div class="newsLeft">
-                  <b>24</b>
-                  <i>2023-09</i>
+                  <b>{{ item.created | timeGetDay }}</b>
+                  <i>{{ item.created | timeGetYearMonth }}</i>
                 </div>
                 <div class="newsRight">
-                  <div class="title" title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线</div>
-                  <div class="desc">热烈庆祝万川汇泽临清市综合服务与产业孵化平台上线，竭诚欢迎你的光临！</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">
-                <div class="newsLeft">
-                  <b>22</b>
-                  <i>2023-09</i>
-                </div>
-                <div class="newsRight">
-                  <div class="title" title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线</div>
-                  <div class="desc">热烈庆祝万川汇泽临清市综合服务与产业孵化平台上线，竭诚欢迎你的光临！</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">
-                <div class="newsLeft">
-                  <b>22</b>
-                  <i>2023-09</i>
-                </div>
-                <div class="newsRight">
-                  <div class="title" title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线</div>
-                  <div class="desc">热烈庆祝万川汇泽临清市综合服务与产业孵化平台上线，竭诚欢迎你的光临！</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">
-                <div class="newsLeft">
-                  <b>22</b>
-                  <i>2023-09</i>
-                </div>
-                <div class="newsRight">
-                  <div class="title" title="热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线">热烈庆祝万川汇泽临清市综合服务与孵化产业平台上线</div>
-                  <div class="desc">热烈庆祝万川汇泽临清市综合服务与产业孵化平台上线，竭诚欢迎你的光临！</div>
+                  <div class="title" :title="item.title">{{ item.title }}</div>
+                  <div class="desc">{{ item.desc }}</div>
                 </div>
               </a>
             </li>
@@ -236,27 +128,78 @@
         </div>
       </div>
     </section>
+    <!-- 合作伙伴 -->
+    <section class="partner-wrap">
+      <div class="insTitle">
+        <b>合作伙伴</b>
+        <i>OUR PARTNERS</i>
+      </div>
+      <div class="content">
+        <ul>
+          <li v-for="(item, index) in linkAry" :key="index">
+            <a :href="item.url" target="_blank" :title="item.name" :style="{ backgroundImage: 'url(' + item.cover + ')' }" />
+          </li>
+        </ul>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
+import dayjs from 'dayjs'
+import api from '@/api'
+import settings from '@/settings'
 export default {
   name: 'IndexPage',
+  filters: {
+    timeGetDay(val) {
+      return dayjs(val).format('DD')
+    },
+    timeGetYearMonth(val) {
+      return dayjs(val).format('YYYY-MM')
+    },
+  },
   data() {
     return {
-      aboutUs: require('@/assets/images/home/about-us/1.png'),
-      news: require('@/assets/images/home/news-wrap/bg.png'),
+      aboutUsImage: require('@/assets/images/home/about-us/1.png'),
+      newsWrapImage: require('@/assets/images/home/news-wrap/bg.png'),
+      linkAry: [],
+      articleAry: {
+        list1: [],
+        list2: [],
+        list3: [],
+      },
       newsTabs: 1,
     }
+  },
+  head() {
+    return {
+      title: `首页-${settings.title}`,
+      meta: [
+        { hid: 'description', name: 'description', content: '前端小喵' },
+        { hid: 'keywords', name: 'keywords', content: '前端小喵' },
+      ],
+    }
+  },
+  created() {
+    this.getData()
   },
   methods: {
     newsTabsChange(val) {
       this.newsTabs = val
+    },
+    async getData() {
+      await api.linkList({ type: 2, sort: '-sort' }).then(({ code, data, msg }) => {
+        this.linkAry = data
+      })
+      await api.articleHome({ timestamp: Date.now() }).then(({ code, data, msg }) => {
+        this.articleAry = data
+      })
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-@import url('@/assets/styles/banner.scss');
+@import url('@/assets/styles/home.scss');
 </style>

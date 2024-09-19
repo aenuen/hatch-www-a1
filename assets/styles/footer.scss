@@ -1,185 +1,109 @@
 footer {
-  background: url('~assets/images/footerBg.jpg') center center;
-  background-size: contain;
+  background-color: #222;
 
   .footerWrap {
-    height: 300px;
-    max-width: 1440px;
-    min-width: 1160px;
-    padding: 30px 20px;
+    width: 1200px;
     margin: auto;
-    display: flex;
-    justify-content: space-between;
+  }
 
-    .footerLeft {
-      width: 360px;
-      margin-right: 20px;
+  .footerMenu {
+    padding: 10px 0;
+    border-bottom: 1px solid #383838;
+    ul {
+      display: flex;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
 
-      .TitleApp {
-        color: #fff;
-        font-size: 20px;
-        height: 30px;
-        line-height: 30px;
-        font-weight: bold;
-        padding-left: 30px;
-        background: url('~assets/images/icon/app.png') no-repeat left center;
-      }
-
-      .footerIcon {
-        width: 100%;
-        padding-top: 30px;
-        display: flex;
-
-        .commonIcon {
-          width: 170px;
-          height: 50px;
-          border-radius: 5px;
-          padding-left: 60px;
-          cursor: pointer;
-          position: relative;
-
-          .text {
-            font-size: 16px;
-            font-weight: 300;
-            line-height: 50px;
-          }
-        }
-
-        .commonIcon.apple {
-          background: url('~assets/images/icon/apple.png') no-repeat 20px center #fff;
-          margin-right: 20px;
-        }
-
-        .commonIcon.android {
-          background: url('~assets/images/icon/android.png') no-repeat 20px center #fff;
-        }
-
-        .commonIcon:hover {
-          .qrcShow {
-            display: block;
-          }
-        }
-      }
-
-      .footerChat {
-        padding-top: 30px;
-        .WeChatIcon {
-          background-color: rgba(255, 255, 255, 0.2);
-          width: 80px;
-          height: 80px;
-          padding: 22px 18px;
-          border-radius: 100%;
-          position: relative;
-          cursor: pointer;
-          .icon {
-            width: 44px;
-            height: 36px;
-            background: url('~assets/images/icon/wechat.png') no-repeat center center;
-          }
-        }
-        .WeChatIcon:hover {
-          .qrcShow {
-            display: block;
-            left: -45px;
-            bottom: 105px;
-          }
-        }
-      }
-
-      .qrcShow {
-        display: none;
-        position: absolute;
-        width: 170px;
-        height: 170px;
-        left: 0;
-        bottom: 70px;
-        z-index: 999;
-
-        .qrcArrow {
+      li {
+        text-align: center;
+        height: 50px;
+        position: relative;
+        &::before {
+          content: '';
+          display: block;
+          width: 1px;
+          height: 16px;
           position: absolute;
-          width: 18px;
-          height: 9px;
-          left: 75px;
-          bottom: -9px;
-          background: url('~assets/images/qrc/arrow.png') no-repeat center center;
+          top: 16px;
+          left: 0;
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+        &:nth-child(1)::before {
+          display: none;
+        }
+        a {
+          padding: 0 20px;
+          margin: 0 20px;
+          font-size: 16px;
+          line-height: 50px;
+          color: #fff;
+        }
+        a:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .footerCenter {
+    padding: 30px 0;
+    border-bottom: 1px solid #383838;
+
+    ul {
+      margin: 0;
+    }
+
+    .name {
+      color: #fff;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .telephone {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #007bc7;
+      border-radius: 5px;
+      width: 100%;
+      max-width: 360px;
+      margin: 20px auto;
+      height: 50px;
+
+      .telIcon {
+        text-align: center;
+        margin-right: 20px;
+        font-size: 30px;
+        color: #fff;
+      }
+
+      a {
+        font-size: 26px;
+        line-height: 50px;
+        color: #fff;
+        font-weight: bold;
+        &:hover {
+          color: #fff;
         }
       }
     }
 
-    .footerRight {
-      width: 780px;
-      .TitleEarth {
-        color: #fff;
-        font-size: 20px;
-        height: 30px;
-        line-height: 30px;
-        font-weight: bold;
-        padding-left: 30px;
-        background: url('~assets/images/icon/earth.png') no-repeat left center;
-      }
+    .address {
+      color: #fff;
+      text-align: center;
+    }
+  }
 
-      .footerLink {
-        width: 100%;
-        display: flex;
-        margin-top: 20px;
-
-        .linkItem {
-          width: 200px;
-          margin-right: 20px;
-          position: relative;
-
-          .title {
-            width: 200px;
-            height: 40px;
-            line-height: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            background: url('~assets/images/qrc/arrow.png') no-repeat 175px center;
-            text-indent: 9px;
-            cursor: pointer;
-            color: #fff;
-          }
-
-          ul {
-            overflow-y: auto;
-            overflow-x: hidden;
-            width: 200px;
-            height: 125px;
-            background-color: #fff;
-            border: 1px solid #fff;
-            position: absolute;
-            top: 40px;
-            left: 0;
-            display: none;
-            li {
-              text-indent: 10px;
-              overflow: hidden;
-              height: 25px;
-              line-height: 25px;
-            }
-          }
-        }
-
-        .linkItem:hover {
-          ul {
-            display: block;
-          }
-        }
-
-        .linkItem:last-child {
-          margin-right: 0;
-        }
-      }
-
-      .footerCopy {
-        margin-top: 20px;
-        border-top: 1px solid rgba(255, 255, 255, 0.3);
-        padding-top: 19px;
-        line-height: 40px;
-        font-size: 16px;
-        color: #fff;
-      }
-
-      .footerCopy a {
+  .footerBottom {
+    height: 60px;
+    text-align: center;
+    color: #ddd;
+    padding-top: 20px;
+    a {
+      color: #ddd;
+      &:hover {
         color: #fff;
       }
     }

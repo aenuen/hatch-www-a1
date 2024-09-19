@@ -10,10 +10,24 @@ header {
   &.isTop {
     transition: 0.2s all linear;
     background: rgba(85, 130, 170, 0.8);
+    a {
+      color: #fff !important;
+      &:hover {
+        color: #0056a7 !important;
+      }
+    }
+    .dropdown-menu {
+      a {
+        color: #000 !important;
+        &:hover {
+          color: #1890ff !important;
+        }
+      }
+    }
   }
 
   .header-wrap {
-    width: 1400px;
+    width: 1200px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -26,7 +40,7 @@ header {
     }
 
     nav {
-      width: 840px;
+      width: 800px;
       height: 40px;
       margin: 10px 0;
 
@@ -34,7 +48,6 @@ header {
         display: flex;
 
         > li {
-          padding: 0 10px;
           min-width: 100px;
           height: 40px;
           position: relative;
@@ -50,9 +63,6 @@ header {
           }
 
           &:hover {
-            .dropdown-menu {
-              display: block;
-            }
             &::before {
               width: 100%;
               top: 0;
@@ -60,6 +70,9 @@ header {
               transition-delay: 0.1s;
               border-bottom-color: #1890ff;
               z-index: -1;
+            }
+            .dropdown-menu {
+              display: block;
             }
           }
 
@@ -89,7 +102,6 @@ header {
 
           a {
             display: block;
-            padding: 0 10px;
             color: #000;
             font-size: 16px;
             line-height: 30px;
@@ -101,12 +113,6 @@ header {
           }
         }
       }
-    }
-  }
-
-  @media screen and (max-width: 1430px) {
-    .header-wrap {
-      width: 95%;
     }
   }
 }

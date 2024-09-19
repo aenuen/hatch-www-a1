@@ -1,5 +1,9 @@
 import defaultSettings from './settings'
 export default {
+  server: {
+    port: defaultSettings.port, // default: 3000
+    host: '0.0.0.0', // default: localhost
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: defaultSettings.title,
@@ -11,7 +15,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['normalize.css/normalize.css', '@/assets/styles/reset.css', 'ant-design-vue/dist/antd.css', '@/assets/styles/global.scss'],
+  css: ['normalize.css/normalize.css', '@/assets/styles/reset.css', 'ant-design-vue/dist/antd.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['@/plugins/antd-ui'],
@@ -39,8 +43,23 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    // 合并CSS
-    extractCSS: true,
+    // // 合并CSS
+    // extractCSS: true,
+    // // 开启CSS SourceMaps
+    // cssSourceMap: false,
+    // // 开启CSS压缩
+    // cssMinimize: true,
+    // // 开启JS SourceMaps
+    // sourceMap: false,
+    // // 开启JS压缩
+    // minimize: true,
+    // // 开启图片压缩
+    // optimizeImages: true,
+    // // 开启字体压缩
+    // optimizeFonts: true,
+    // // 开启浏览器兼容性
+    // transpile: ['@babel/polyfill'],
+    // 优化
     optimization: {
       splitChunks: {
         cacheGroups: {
