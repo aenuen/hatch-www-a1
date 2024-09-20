@@ -15,7 +15,18 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['normalize.css/normalize.css', '@/assets/styles/reset.css', 'ant-design-vue/dist/antd.css'],
+  css: [
+    // 重置样式
+    'normalize.css/normalize.css',
+    // 动画样式
+    'animate.css/animate.min.css',
+    // 重置样式
+    '@/assets/styles/reset.css',
+    // 引入全局样式
+    '@/assets/styles/common.scss',
+    // 引入antd
+    'ant-design-vue/dist/antd.css',
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['@/plugins/antd-ui'],
@@ -43,8 +54,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    // // 合并CSS
-    // extractCSS: true,
+    // 合并CSS
+    extractCSS: true,
     // // 开启CSS SourceMaps
     // cssSourceMap: false,
     // // 开启CSS压缩

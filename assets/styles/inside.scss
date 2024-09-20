@@ -3,7 +3,6 @@
   width: 100%;
   height: 300px;
   margin-top: 100px;
-  min-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,9 +83,117 @@
           color: #333;
           border-left: 5px solid #1890ff;
         }
-        .qqmap {
-          width: 100%;
-          height: 600px;
+        .article {
+          .articleList {
+            .news {
+              width: 100%;
+              margin: 0;
+              li {
+                width: 100%;
+                height: 90px;
+                border: 1px solid #eee;
+                padding: 9px;
+                margin-top: 10px;
+                transition: all 0.3s;
+                &:hover {
+                  box-shadow: 0 0 0.07rem rgba(0, 0, 0, 0.1);
+                }
+                a {
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  align-items: center;
+                  color: #000;
+                  &:hover {
+                    color: #1890ff;
+                  }
+                  .newsLeft {
+                    width: 80px;
+                    height: 80px;
+                    margin-right: 10px;
+                    text-align: center;
+                    i {
+                      height: 25px;
+                      line-height: 25px;
+                    }
+                    b {
+                      height: 55px;
+                      line-height: 55px;
+                      font-size: 48px;
+                      font-weight: bold;
+                    }
+                  }
+                  .newsRight {
+                    flex: 1;
+                    .rTitle {
+                      width: 100%;
+                      height: 30px;
+                      line-height: 30px;
+                      font-size: 16px;
+                      font-weight: bold;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                    }
+                    .rDesc {
+                      width: 100%;
+                      height: 40px;
+                      line-height: 20px;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      color: #999;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .articlePage {
+            text-align: center;
+            margin-top: 30px;
+          }
+          .articleHead {
+            width: 100%;
+            padding-bottom: 19px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
+          }
+          .articleTitle {
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: bold;
+          }
+          .articleWork {
+            width: 100%;
+            margin-top: 20px;
+            ul {
+              margin: 0;
+              display: flex;
+              justify-content: center; /* 水平居中 */
+              li {
+                margin: 0 10px;
+                font-size: 14px;
+                line-height: 20px;
+              }
+            }
+          }
+          .articleContent {
+            font-size: 16px;
+            line-height: 30px;
+            div,
+            p {
+              margin: 0;
+              padding: 0;
+              font-size: 16px;
+              line-height: 30px;
+              text-indent: 2em;
+              margin-top: 30px;
+            }
+            img {
+              max-width: 100%;
+            }
+          }
         }
         .contact {
           margin: 0;

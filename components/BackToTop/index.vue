@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import defaultData from './settings'
+import defaultData from './modules/settings'
 export default {
   name: 'ComponentsBackToTop',
   props: {

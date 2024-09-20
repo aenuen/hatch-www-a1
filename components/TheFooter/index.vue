@@ -29,7 +29,7 @@
 // api
 // components
 // data
-import headNav from '@/assets/js/headerNav'
+import headNav from '~/assets/js/main-nav'
 // filter
 // function
 // mixin
@@ -49,5 +49,5 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import url('@/assets/styles/footer.scss');
+@import url('./styles/index.scss');
 </style>

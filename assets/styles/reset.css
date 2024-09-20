@@ -88,11 +88,9 @@ video {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-
 strong {
   font-weight: bold;
 }
-
 article,
 aside,
 details,
@@ -106,7 +104,6 @@ nav,
 section {
   display: block;
 }
-
 ol,
 ul,
 li {
@@ -114,12 +111,10 @@ li {
   margin: 0;
   padding: 0;
 }
-
 blockquote,
 q {
   quotes: none;
 }
-
 blockquote:before,
 blockquote:after,
 q:before,
@@ -127,49 +122,40 @@ q:after {
   content: '';
   content: none;
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
 th,
 td {
   vertical-align: middle;
 }
-
 a {
   outline: none;
   color: #16418a;
   text-decoration: none;
   -webkit-backface-visibility: hidden;
 }
-
 a:focus {
   outline: none;
 }
-
 input:focus,
 select:focus,
 textarea:focus {
   outline: -webkit-focus-ring-color auto 0;
 }
-
 /* 指正常的未被访问过的链接*/
 a:link {
   text-decoration: none;
 }
-
 /*指已经访问过的链接*/
 a:visited {
   text-decoration: none;
 }
-
 /*指鼠标在链接*/
 a:hover {
   text-decoration: none;
 }
-
 /* 指正在点的链接*/
 a:active {
   text-decoration: none;

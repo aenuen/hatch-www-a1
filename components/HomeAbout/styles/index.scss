@@ -1,0 +1,16 @@
+.content {
+  width: 1200px;
+  margin: auto;
+  .contentText {
+    width: 100%;
+    font-size: 16px;
+    text-indent: 2em;
+    line-height: 30px;
+    text-align: justify;
+  }
+  .contentImage {
+    width: 400px;
+    height: 250px;
+    margin: auto;
+  }
+}

@@ -26,16 +26,16 @@ export default [
     ],
   },
   {
-    name: '人力资源',
-    link: '/joinus',
-  },
-  {
-    name: '项目管理',
-    link: '/project',
+    name: '数字能源',
+    link: '/energy',
   },
   {
     name: '联系我们',
     link: '/contact',
+  },
+  {
+    name: '智慧司法平台',
+    link: 'http://fayuan.zgwanchuan.cn/',
   },
   {
     name: '申请保函',
