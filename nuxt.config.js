@@ -11,10 +11,11 @@ export default {
       lang: 'en',
     },
     meta: [
-      { charset: 'utf-8' }, //
-      { name: 'viewport', content: '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">' }, //
-      { hid: 'description', name: 'description', content: '' }, //
-      { name: 'format-detection', content: 'telephone=no' }, //
+      { charset: 'utf-8' }, // utf8编码
+      { name: 'viewport', content: '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">' }, // 移动端适配
+      { hid: 'description', name: 'description', content: '' }, // 页面描述
+      { name: 'keywords', content: '' }, // 页面关键字
+      { name: 'format-detection', content: 'telephone=no' }, // 禁止自动识别电话号码
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
   },
@@ -23,19 +24,20 @@ export default {
   css: [
     // 重置样式
     'normalize.css/normalize.css',
-    // 重置样式
-    '@/assets/styles/reset.css',
-    // 引入全局样式
-    '@/assets/styles/common.scss',
     // 动画样式
     'animate.css/animate.min.css',
     // 引入antd
     'ant-design-vue/dist/antd.css',
+    // 重置样式
+    '@/assets/styles/reset.css',
+    // 引入全局样式
+    '@/assets/styles/common.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '@/plugins/antd-ui', // 引入antd
+    // { src: '@/plugins/flexible.js', ssr: false }, // 移动端适配
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -66,6 +68,15 @@ export default {
     // postcss
     postcss: {
       plugins: {
+        // 'postcss-pxtorem': {
+        //   // rootValue: 100, //计算公式为：设计稿宽度 / 10。假设设计稿为375px，即rootValue设为37.5，意味着每个 rem 单位对应设计稿中的 37.5px
+        //   propList: ['*'], // 可以从px更改为rem的属性。
+        //   selectorBlackList: ['a-'], // 忽略转换正则匹配到的选择器
+        //   minPixelValue: 12, // 设置最小转换px数值，默认为0
+        //   mediaQuery: false, // 是否转换媒体查询中的px
+        //   replace: true, // 是否直接更换属性值，而不添加具有rem单位的新属性
+        //   exclude: /node_modules/i, // 忽略转换正则匹配到的文件
+        // },
         autoprefixer: {},
       },
     },
