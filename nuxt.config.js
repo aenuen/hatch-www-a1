@@ -37,6 +37,7 @@ export default {
   plugins: [
     '@/plugins/antd-ui', // 引入antd
     { src: '@/plugins/flexible.js', ssr: false }, // 移动端适配
+    { src: '@/plugins/rem.js', ssr: false }, // 移动端适配
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -64,20 +65,23 @@ export default {
   build: {
     // 合并CSS
     extractCSS: true,
-    // // 开启CSS SourceMaps
-    // cssSourceMap: false,
-    // // 开启CSS压缩
-    // cssMinimize: true,
-    // // 开启JS SourceMaps
-    // sourceMap: false,
-    // // 开启JS压缩
-    // minimize: true,
-    // // 开启图片压缩
-    // optimizeImages: true,
-    // // 开启字体压缩
-    // optimizeFonts: true,
-    // // 开启浏览器兼容性
-    // transpile: ['@babel/polyfill'],
+    // postcss
+    postcss: {
+      plugins: {
+        'postcss-pxtorem': {
+          rootValue: 80, // 1920的设计图
+          unitPrecision: 5, // 允许REM单位增长到的十进制数字。
+          propWhiteList: [], // 默认值是一个空数组，这意味着禁用白名单并启用所有属性。
+          propBlackList: [], // 如果非空的，你的属性将被阻止从转换中转换。
+          propList: ['*'], // 可以从px更改为rem的属性。
+          exclude: false, // 默认false，可以（reg）利用正则表达式排除某些文件夹的方法。例如/(node_module)/ 。如果想把前端UI框架内的px也转换成rem，请把此属性设为默认值。
+          selectorBlackList: [], // 要忽略并保留为px的选择器。
+          replace: true, // （布尔值）替换包含REM的规则，而不是添加回退。
+          mediaQuery: false, // （布尔值）允许在媒体查询中使用px。
+          minPixelValue: 1, // 设置要替换的最小像素值。默认 0。
+        },
+      },
+    },
     // 优化
     optimization: {
       splitChunks: {

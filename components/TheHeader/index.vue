@@ -2,7 +2,7 @@
   <header :class="isTop ? '' : 'isTop'">
     <div class="header-wrap">
       <div class="logo">
-        <nuxt-link to="/" :title="logoName">
+        <nuxt-link to="/" :title="logoName" class="logo">
           <img src="@/assets/images/logo/logo-full.png" :alt="logoName" />
         </nuxt-link>
       </div>

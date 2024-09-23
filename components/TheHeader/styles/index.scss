@@ -27,7 +27,7 @@ header {
   }
 
   .header-wrap {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -36,7 +36,6 @@ header {
     .logo {
       width: 330px;
       height: 60px;
-      background: url('~assets/images/logo/logo-full.png') no-repeat center center;
     }
 
     nav {
