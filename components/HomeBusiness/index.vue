@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="aboutContent">
     <div>
       <a href="/business">
         <div class="contentImage">

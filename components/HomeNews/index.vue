@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="newsContent">
     <div class="left">
       <a-avatar shape="square" :src="newsWrapImage" style="width: 580px; height: 400px" />
     </div>

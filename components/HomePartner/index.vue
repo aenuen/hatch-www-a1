@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="partnerContent">
     <ul>
       <li v-for="(item, index) in linkAry" :key="index">
         <a :href="item.url" target="_blank" :title="item.name" :style="{ backgroundImage: 'url(' + item.cover + ')' }" />
