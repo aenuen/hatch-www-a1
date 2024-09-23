@@ -10,7 +10,12 @@ export default {
     htmlAttrs: {
       lang: 'en',
     },
-    meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }, { hid: 'description', name: 'description', content: '' }, { name: 'format-detection', content: 'telephone=no' }],
+    meta: [
+      { charset: 'utf-8' }, //
+      { name: 'viewport', content: '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">' }, //
+      { hid: 'description', name: 'description', content: '' }, //
+      { name: 'format-detection', content: 'telephone=no' }, //
+    ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
   },
 
@@ -29,7 +34,10 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/antd-ui'],
+  plugins: [
+    '@/plugins/antd-ui', // 引入antd
+    { src: '@/plugins/flexible.js', ssr: false }, // 移动端适配
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
