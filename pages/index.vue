@@ -44,8 +44,8 @@ export default {
     return {
       title: `首页-${settings.title}`,
       meta: [
-        { hid: 'description', name: 'description', content: '前端小喵' },
-        { hid: 'keywords', name: 'keywords', content: '前端小喵' },
+        { hid: 'description', name: 'description', content: '焦作解放区综合服务与产业孵化平台,工程担保,工程投标担保,工程履约担保,农民工工资担保' },
+        { hid: 'keywords', name: 'keywords', content: '焦作解放区综合服务与产业孵化平台成立以来，励志成为行业的后起之秀，秉承“诚信专业 厚德共赢”的理念，专业从事工程投标担保、投标履约、农民工工资担保等业务。' },
       ],
     }
   },

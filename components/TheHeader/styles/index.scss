@@ -45,6 +45,10 @@ header {
 
       .main-menu {
         display: flex;
+        font-size: 0.16rem;
+        @media screen and (max-width: 750px) {
+          display: none;
+        }
 
         > li {
           min-width: 100px;
