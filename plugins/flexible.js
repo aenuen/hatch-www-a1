@@ -1,1 +1,1 @@
-import 'amfe-flexible'
+import '@/assets/js/flexible'
