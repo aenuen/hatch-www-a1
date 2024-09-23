@@ -35,7 +35,7 @@ export default [
   },
   {
     name: '智慧司法平台',
-    link: 'http://fayuan.zgwanchuan.cn/',
+    link: 'http://fayuan.zgwanchuan.cn/#/guide',
   },
   {
     name: '申请保函',

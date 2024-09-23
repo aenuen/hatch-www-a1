@@ -18,12 +18,12 @@ export default {
   css: [
     // 重置样式
     'normalize.css/normalize.css',
-    // 动画样式
-    'animate.css/animate.min.css',
     // 重置样式
     '@/assets/styles/reset.css',
     // 引入全局样式
     '@/assets/styles/common.scss',
+    // 动画样式
+    'animate.css/animate.min.css',
     // 引入antd
     'ant-design-vue/dist/antd.css',
   ],
