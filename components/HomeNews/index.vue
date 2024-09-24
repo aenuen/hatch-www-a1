@@ -1,7 +1,7 @@
 <template>
   <div class="newsContent">
     <div class="left">
-      <a-avatar shape="square" :src="newsWrapImage" style="width: 580px; height: 400px" />
+      <img :src="newsWrapImage" />
     </div>
     <div class="right">
       <ul class="nav">

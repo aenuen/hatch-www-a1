@@ -32,27 +32,60 @@ header {
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 750px) {
+      width: 100%;
+      padding: 20px 0 20px 10px;
+    }
 
     .logo {
-      width: 330px;
-      height: 60px;
+      width: 3.3rem;
+      height: 0.6rem;
+      a {
+        display: block;
+        img {
+        }
+      }
+    }
+
+    .jump {
+      width: 0.3rem;
+      height: 0.6rem;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media screen and (min-width: 750px) {
+        display: none;
+      }
+      svg {
+        width: 0.3rem;
+        height: 0.3rem;
+        fill: #007bc7;
+      }
     }
 
     nav {
       width: 800px;
       height: 40px;
       margin: 10px 0;
+      @media screen and (max-width: 750px) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+      }
 
       .main-menu {
         display: flex;
-        font-size: 0.16rem;
         @media screen and (max-width: 750px) {
-          display: none;
+          display: block;
+          background: #fff;
         }
 
         > li {
           min-width: 100px;
-          height: 40px;
           position: relative;
           &::before {
             content: '';
@@ -64,7 +97,6 @@ header {
             border-bottom: 2px solid #1890ff;
             transition: 0.2s all linear;
           }
-
           &:hover {
             &::before {
               width: 100%;
@@ -73,6 +105,9 @@ header {
               transition-delay: 0.1s;
               border-bottom-color: #1890ff;
               z-index: -1;
+            }
+            @media screen and (max-width: 750px) {
+              width: 100%;
             }
             .dropdown-menu {
               display: block;
@@ -86,18 +121,35 @@ header {
             position: absolute;
             top: 40px;
             left: -20px;
+            @media screen and (max-width: 750px) {
+              width: 100%;
+              position: initial;
+              top: initial;
+              left: initial;
+            }
 
             > ul {
               background-color: #efefef;
               border-radius: 10px;
               padding: 20px 0;
+              @media screen and (max-width: 750px) {
+                background: none;
+                padding: 0;
+                width: 100%;
+              }
               > li {
                 min-width: 100px;
-                height: 40px;
                 position: relative;
+                @media screen and (max-width: 750px) {
+                  width: 100%;
+                }
                 a {
                   text-indent: 35px;
                   text-align: left;
+                  @media screen and (max-width: 750px) {
+                    text-align: center;
+                    text-indent: 0;
+                  }
                 }
               }
             }
@@ -107,7 +159,7 @@ header {
             display: block;
             color: #000;
             font-size: 16px;
-            line-height: 30px;
+            line-height: 40px;
             border-radius: 5px;
             text-align: center;
             &:hover {

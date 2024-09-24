@@ -37,8 +37,6 @@ import headNav from '~/assets/js/main-nav'
 // settings
 export default {
   name: 'TheFooter',
-  components: {},
-  mixin: [],
   data() {
     return {
       headNav,

@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div class="banner"></div>
+    <!-- PC轮播图 -->
+    <HomePcSwiper v-if="screenWidth > 750" />
+    <!-- 手机轮播图 -->
+    <HomeMbSwiper v-if="screenWidth <= 750" />
     <!-- 业务种类 -->
     <section class="business-lines">
       <div class="insTitle">
@@ -38,8 +41,13 @@
 
 <script>
 import settings from '@/settings'
+import ScreenWidthMixin from '@/mixins/ScreenWidthMixin'
 export default {
   name: 'IndexPage',
+  mixins: [ScreenWidthMixin],
+  data() {
+    return {}
+  },
   head() {
     return {
       title: `首页-${settings.title}`,

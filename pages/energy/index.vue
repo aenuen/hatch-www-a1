@@ -10,14 +10,14 @@
         <div class="energy-service">
           <ul>
             <li class="animate__animated animate__backInDown">
-              <div class="line-content" style="margin-right: 50px">
+              <div class="line-content mr50">
                 <p>
                   随着全球对清洁能源的需求不断增长，工商业用电成本居高不下， 以及我国对能源转型和乡 村振兴的高度重视，分布式风光储+N 再生能 源一体化开发成为了实现可持续发展的重要途径。 这一模式不仅能够充 分利用县域内的风能、太阳能、水能、生物质能源等可再生资源，还能 通
                   过储能系统和智能电网技术，实现能源的高效存储和调配，为县域经济社会发展提供稳定、清洁、低成本的能源供应。
                 </p>
               </div>
               <div class="line-image">
-                <a-avatar shape="square" :src="require('@/assets/images/energy/4.png')" style="width: 400px; height: 250px" />
+                <img :src="require('@/assets/images/energy/4.png')" />
               </div>
             </li>
           </ul>
@@ -33,8 +33,8 @@
         <div class="energy-service">
           <ul>
             <li class="animate__animated animate__backInRight">
-              <div class="line-image" style="margin-right: 50px">
-                <a-avatar shape="square" :src="require('@/assets/images/energy/1.png')" style="width: 400px; height: 250px" />
+              <div class="line-image mr50">
+                <img :src="require('@/assets/images/energy/1.png')" />
               </div>
               <div class="line-content">
                 <b>智慧照明产业</b>
@@ -44,19 +44,19 @@
               </div>
             </li>
             <li class="animate__animated animate__backInLeft">
-              <div class="line-content" style="margin-right: 50px">
+              <div class="line-content m550">
                 <b>风光互补城乡路灯</b>
                 <p>
                   风光互补路灯照明系统，是风和光的多向性及时间、空间互补性促成了其完美结合，同时风光互补路灯因有风能补充，其可靠性更强，由于风能和太阳能在时间上、季节上都有很好的互补性，风光互补路灯使用区域更加广阔。风光互补路灯是一种理想的独立供电道路照明系统。“风光互补”是同时利用风能和太阳能进行发电的系统，两者具有良好的互补性，大大提高发电系统的稳定性。
                 </p>
               </div>
               <div class="line-image">
-                <a-avatar shape="square" :src="require('@/assets/images/energy/2.png')" style="width: 400px; height: 250px" />
+                <img :src="require('@/assets/images/energy/2.png')" />
               </div>
             </li>
             <li class="animate__animated animate__backInRight">
-              <div class="line-image" style="margin-right: 50px">
-                <a-avatar shape="square" :src="require('@/assets/images/energy/3.png')" style="width: 400px; height: 250px" />
+              <div class="line-image mr50">
+                <img :src="require('@/assets/images/energy/3.png')" />
               </div>
               <div class="line-content">
                 <b>风光互补智能系统</b>
@@ -75,12 +75,12 @@
         <div class="energy-service">
           <ul>
             <li class="animate__animated animate__backInLeft">
-              <div class="line-content" style="margin-right: 50px">
+              <div class="line-content mr50">
                 <p>随着通信设备的普及，对通信设备信号的覆盖率也提出了很高的要求， 对于幅员辽阔的草原和山区要想做到信号全面覆盖就要建立大量的基站， 通信基站风光互补供电系统可实现无人值守、远程监控，设备可免日常维护。 有效地解决了市电引入非常困难的问题，实现了节能降耗的目标，为建设低碳 做出应有的贡献。</p>
                 <p>公司能根据客户需求提供不同的基站供电系统解决方案，如：风电互补、光电互 补、风光互补、风光电互补、风光柴及风光柴电混合能源供电模式，及高寒地 区通信基站新能源供电系统解决方案。</p>
               </div>
               <div class="line-image">
-                <a-avatar shape="square" :src="require('@/assets/images/energy/5.png')" style="width: 400px; height: 250px" />
+                <img :src="require('@/assets/images/energy/5.png')" />
               </div>
             </li>
           </ul>
@@ -93,7 +93,6 @@
 // api
 // components
 // data
-import menus from './modules/menus'
 // filter
 // function
 // mixin
@@ -105,14 +104,11 @@ export default {
   data() {
     return {
       title: '数学能源',
-      menus,
-      current: 'intro',
-      nowName: '背景介绍',
     }
   },
   head() {
     return {
-      title: `${this.nowName}-${settings.title}`,
+      title: `${this.title}-${settings.title}`,
       meta: [
         { hid: 'keywords', name: 'keywords', content: '电子保函服务' },
         {

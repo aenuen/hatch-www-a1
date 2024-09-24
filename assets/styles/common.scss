@@ -18,6 +18,14 @@
     font-size: 40px;
     color: #fff;
     font-weight: bold;
+    @media screen and (max-width: 750px) {
+      width: 100%;
+      padding: 0 20px;
+      margin-left: 0;
+      left: 0;
+      text-align: center;
+      font-size: 30px;
+    }
   }
   .energy-intro {
     width: 600px;
@@ -28,6 +36,14 @@
     font-size: 18px;
     color: #fff;
     text-align: justify;
+    @media screen and (max-width: 750px) {
+      width: 100%;
+      padding: 0 20px;
+      margin-left: 0;
+      left: 0;
+      text-align: center;
+      font-size: 16px;
+    }
   }
 }
 
@@ -64,4 +80,7 @@
   line-height: 25px;
   color: #333;
   border-left: 5px solid #1890ff;
+  @media screen and (max-width: 750px) {
+    width: 100%;
+  }
 }

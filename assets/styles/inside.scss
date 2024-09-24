@@ -15,6 +15,10 @@
   &.about {
     background: url('~/assets/images/banner/about.jpg') no-repeat center center;
   }
+  @media screen and (max-width: 750px) {
+    font-size: 40px;
+    height: 200px;
+  }
 }
 
 .inside {
@@ -25,12 +29,21 @@
     width: 1200px;
     margin: auto;
     display: flex;
+    @media screen and (max-width: 750px) {
+      width: 100%;
+      display: block;
+    }
     .inside-right {
       background-color: #fff;
       width: 940px;
       float: right;
       padding: 30px;
       min-height: 400px;
+      @media screen and (max-width: 750px) {
+        width: 100%;
+        float: none;
+        padding: 20px;
+      }
       .title {
         padding: 10px 0 20px;
         border-bottom: 1px solid #eee;

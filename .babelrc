@@ -12,5 +12,14 @@
         ]
       ]
     }
-  }
+  },
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "ant-design-vue",
+        "style": "css"
+      }
+    ]
+  ]
 }
