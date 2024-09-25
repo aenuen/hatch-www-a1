@@ -1,54 +1,32 @@
 <template>
-  <div class="swiper">
-    <swiper ref="mySwiper" :options="swiperOptions">
-      <swiper-slide v-for="(item, index) in linkAry" :key="index" class="">
-        <nuxt-link :to="item.url" class="link" :style="{ backgroundImage: 'url(' + item.cover + ')', backgroundPosition: 'center center' }" />
-      </swiper-slide>
-    </swiper>
-    <div class="data">
-      <div class="count-item">
-        <img :src="require('@/assets/images/home-swiper/1.png')" alt="" />
-        <div>
-          <CountTo :start-val="0" :end-val="10788" :duration="3000" />
-          <p>注册企业</p>
-        </div>
-      </div>
-      <div class="count-item">
-        <img :src="require('@/assets/images/home-swiper/2.png')" alt="" />
-        <div>
-          <CountTo :start-val="0" :end-val="10788" :duration="3000" />
-          <p>申请融资企业</p>
-        </div>
-      </div>
-      <div class="count-item">
-        <img :src="require('@/assets/images/home-swiper/3.png')" alt="" />
-        <div>
-          <CountTo :start-val="0" :end-val="54" :duration="3000" />
-          <p>合作企业</p>
-        </div>
-      </div>
-      <div class="count-item">
-        <img :src="require('@/assets/images/home-swiper/4.png')" alt="" />
-        <div>
-          <CountTo :start-val="0" :end-val="3333" :duration="3000" />
-          <p>融资金额</p>
-        </div>
-      </div>
-      <div class="count-item">
-        <img :src="require('@/assets/images/home-swiper/5.png')" alt="" />
-        <div>
-          <CountTo :start-val="0" :end-val="4653" :duration="3000" />
-          <p>融资需求</p>
+  <div class="banner">
+    <div v-if="isShowSwiper" class="swiper">
+      <swiper :options="swiperOptions">
+        <swiper-slide v-for="(item, index) in linkAry" :key="index" class="">
+          <nuxt-link :to="item.url" class="link" :style="{ backgroundImage: 'url(' + item.cover + ')', backgroundPosition: 'center center' }" />
+        </swiper-slide>
+      </swiper>
+      <div class="swiper-pagination"></div>
+      <div class="data">
+        <div v-for="(item, index) in showData" :key="index" class="count-item">
+          <img :src="require('@/assets/images/home-swiper/' + item.image)" alt="" />
+          <div>
+            <div>
+              <CountTo :start-val="0" :end-val="item.number" :duration="3000" />
+              <b>{{ item.unit }}</b>
+            </div>
+            <p>{{ item.name }}</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="swiper-pagination"></div>
   </div>
 </template>
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import CountTo from 'vue-count-to'
 import 'swiper/css/swiper.css'
+import showData from './modules/data.js'
 import ScreenWidthMixin from '@/mixins/ScreenWidthMixin'
 import api from '@/api'
 export default {
@@ -58,7 +36,9 @@ export default {
   data() {
     return {
       api,
+      isShowSwiper: false,
       linkAry: [],
+      showData,
       swiperOptions: {
         loop: true,
         autoplay: {
@@ -92,11 +72,14 @@ export default {
     async gainLinkData() {
       await api.linkList({ type: 3, sort: '-sort' }).then(({ code, data, msg }) => {
         this.linkAry = data
+        this.$nextTick(() => {
+          this.isShowSwiper = true
+        })
       })
     },
   },
 }
 </script>
 <style lang="scss" scoped>
-@import url('./modules/index.scss');
+@import url('./styles/index.scss');
 </style>

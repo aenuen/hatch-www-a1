@@ -16,14 +16,12 @@
       margin: 20px;
     }
   }
-  .contentImage {
+  .swiper {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .swiper-slide {
     width: 400px;
-    height: 250px;
-    margin: auto;
-    @media screen and (max-width: 750px) {
-      width: calc(100% - 40px);
-      margin: 20px;
-    }
     img {
       width: 100%;
     }
