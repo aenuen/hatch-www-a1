@@ -1,13 +1,15 @@
 <template>
-  <div class="swiper">
-    <swiper ref="mySwiper" :options="swiperOptions">
-      <swiper-slide v-for="(item, index) in linkAry" :key="index" class="">
-        <nuxt-link :to="item.url" :style="{ width: screenWidth + 'px' }">
-          <img :src="item.cover" alt="" :style="{ width: screenWidth + 'px' }" />
-        </nuxt-link>
-      </swiper-slide>
-    </swiper>
-    <div class="swiper-pagination"></div>
+  <div class="banner">
+    <div v-if="isShowSwiper" class="swiper">
+      <swiper ref="mySwiper" :options="swiperOptions">
+        <swiper-slide v-for="(item, index) in linkAry" :key="index" class="">
+          <nuxt-link :to="item.url" :style="{ width: screenWidth + 'px' }">
+            <img :src="item.cover" alt="" :style="{ width: screenWidth + 'px' }" />
+          </nuxt-link>
+        </swiper-slide>
+      </swiper>
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
 </template>
 <script>
@@ -22,6 +24,7 @@ export default {
   data() {
     return {
       api,
+      isShowSwiper: false,
       linkAry: [],
       swiperOptions: {
         loop: true,
@@ -56,6 +59,9 @@ export default {
     async gainLinkData() {
       await api.linkList({ type: 4, sort: '-sort' }).then(({ code, data, msg }) => {
         this.linkAry = data
+        this.$nextTick(() => {
+          this.isShowSwiper = true
+        })
       })
     },
   },
