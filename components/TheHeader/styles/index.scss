@@ -25,6 +25,12 @@ header {
       }
     }
   }
+  &.white {
+    background-color: #fff;
+    a {
+      color: #000 !important;
+    }
+  }
 
   .header-wrap {
     max-width: 1200px;

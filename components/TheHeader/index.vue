@@ -1,5 +1,5 @@
 <template>
-  <header :class="isTop ? '' : 'isTop'">
+  <header :class="{ isTop: !isTop, white: screenWidth <= 750 }">
     <div class="header-wrap">
       <div class="logo">
         <nuxt-link to="/" :title="logoName">
@@ -55,6 +55,12 @@ export default {
       isTop: true, // 初始化为true，表示在顶部
       isShowMenu: false,
     }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     handleScroll() {
